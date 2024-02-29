@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/portfolio-yanchi/static/css/main.bf538fe7.css",
+    "main.js": "/portfolio-yanchi/static/js/main.dfcfd975.js",
+    "static/media/HeroImage.jpg": "/portfolio-yanchi/static/media/HeroImage.7b840957dd4cb41b165e.jpg",
+    "index.html": "/portfolio-yanchi/index.html",
+    "main.bf538fe7.css.map": "/portfolio-yanchi/static/css/main.bf538fe7.css.map",
+    "main.dfcfd975.js.map": "/portfolio-yanchi/static/js/main.dfcfd975.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf538fe7.css",
+    "static/js/main.dfcfd975.js"
+  ]
+}
