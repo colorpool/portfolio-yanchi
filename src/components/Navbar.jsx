@@ -165,6 +165,7 @@ const Navbar = () => {
           <NavLink href="#Experience">Experience</NavLink>
           <NavLink href="#Projects">Projects</NavLink>
           <NavLink href="#Education">Education</NavLink>
+          <NavLink href="#Certification">Certification</NavLink>
         </NavItems>
 
         {isOpen && (

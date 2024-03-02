@@ -9,6 +9,7 @@ import {
   headContentAnimation,
 } from "../../utils/motion";
 import {Tilt} from "react-tilt";
+import StarCanvas from "../canvas/Stars";
 
 const HeroContainer = styled.div`
   display: flex;
@@ -118,6 +119,7 @@ const HeroInnerContainer = styled.div`
     flex-direction: column;
   }
 `;
+
 const HeroLeftContainer = styled.div`
   width: 100%;
   order: 1;
@@ -145,7 +147,7 @@ const HeroRightContainer = styled.div`
     margin-bottom: 80px;
   }
 
-  @media screen and  (max-width: 640px) {
+  @media (max-width: 640px) {
     margin-bottom: 30px;
   }
 `;
@@ -160,15 +162,16 @@ const ResumeButton = styled.a`
   text-align: center;
   padding: 16px 0;
 
-  background: hsla(271, 100%, 50%, 1);
+  background: hsla(160, 100%, 35%, 1); /* 单一背景颜色为深蓝绿色 */
   background: linear-gradient(225deg,
-  hsla(271, 100%, 50%, 1) 0%,
-  hsla(294, 100%, 50%, 1) 100%);
-  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+  hsla(160, 100%, 35%, 1) 0%, /* 起始颜色为深蓝绿色 */
+  hsla(180, 100%, 45%, 1) 50%, /* 中间颜色为中等蓝绿色 */
+  hsla(200, 100%, 55%, 1) 100%); /* 结束颜色为亮青色 */
+  box-shadow: 20px 20px 60px #062c30, -20px -20px 60px #062c30; /* 阴影颜色使用与渐变起始色相似的深色 */
   border-radius: 50px;
   font-weight: 600;
   font-size: 20px;
-
+  
   &:hover {
     transform: scale(1.05);
     transition: all 0.4s ease-in-out;
@@ -188,8 +191,8 @@ const Img = styled.img`
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 450px;
+  max-height: 450px;
   border: 2px solid ${({theme}) => theme.primary};
 
   @media (max-width: 640px) {
@@ -202,7 +205,9 @@ const Hero = () => {
   return (
     <div id="About">
       <HeroContainer>
-        <HeroBg></HeroBg>
+        <HeroBg>
+          <StarCanvas />
+        </HeroBg>
 
         <motion.div {...headContainerAnimation}>
           <HeroInnerContainer>
