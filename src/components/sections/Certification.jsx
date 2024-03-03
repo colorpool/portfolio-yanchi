@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
+import {certification} from "../../data/constants";
+import CertificationCard from "../cards/CertificationCard";
 
 const Container = styled.div`
   display: flex;
@@ -19,6 +21,7 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1100px;
   gap: 12px;
+  padding-bottom: 40px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -46,6 +49,14 @@ const Desc = styled.div`
   }
 `;
 
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+`;
+
 const Certification = () => {
   return (
     <Container id="Certification">
@@ -56,8 +67,13 @@ const Certification = () => {
             marginBottom: "40px",
           }}
         >
-          Here are some of the skills I have been working on developing in my past experiences.
+          The following are the certificates I have obtained in my past studies and practices.
         </Desc>
+        <CardContainer>
+          {certification.map((certification, index) => (
+            <CertificationCard key={`certification-${index}`} certification={certification}/>
+          ))}
+        </CardContainer>
       </Wrapper>
     </Container>
   )

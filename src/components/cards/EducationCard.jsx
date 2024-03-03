@@ -43,6 +43,7 @@ const Degree = styled.div`
     font-size: 12px;
   }
 `;
+
 const Date = styled.div`
   font-size: 12px;
   font-weight: 400;
@@ -52,6 +53,7 @@ const Date = styled.div`
     font-size: 10px;
   }
 `;
+
 const Grade = styled.div`
   font-size: 14px;
   font-weight: 500;
